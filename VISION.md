@@ -16,6 +16,8 @@ That bet settled in 2026, against the project and in favor of the thesis. Claude
 
 These principles now ship as skills and hooks around vendor harnesses instead of a standalone kernel. That is not a retreat — it is the Bitter Lesson executed on ourselves.
 
+A second-round refinement (Aug 2026): even parts of the "enduring" list got absorbed — in our favor. GitHub became the evidence substrate: PR review history is immutable, third-party-attested, and recognized by auditors, and branch protection is a fail-closed envelope for code changes that we no longer have to build or defend. The durable principle was never "own the ledger"; it was "evidence as a side effect of normal operation" — and the cheapest way to honor it is to route normal operation through surfaces that already produce attested records. Homegrown ledgers survive only where nothing attested exists: session-level actions and unattended non-PR autonomy.
+
 ## The one resumption trigger
 
 Build a standalone runtime again only if: a regulated product requirement is real, **and** vendor harnesses still cannot produce auditor-grade evidence for agent actions at that time. Both conditions, not either.

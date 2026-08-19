@@ -5,6 +5,8 @@ description: Fail-closed policy envelope for autonomous sessions — propose typ
 
 # Steward Envelope
 
+> **Status: dormant blueprint.** For *code* changes, branch protection + required reviews already provide a fail-closed envelope enforced by GitHub — use that (see [[landing-evidence]]). This skill matters only for unattended agents taking **non-PR actions** (running commands, spending budgets, infra changes, scheduled triage). Activate it when that workload exists; don't invest before.
+
 Ported from agentos's roadmap steward: the model proposes, a mechanical gate decides, every decision persists. The point is that autonomy is bounded by policy the model cannot argue with — "fail closed over convenience."
 
 ## The loop
