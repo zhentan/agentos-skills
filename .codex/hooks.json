@@ -1,0 +1,18 @@
+{
+  "description": "Evidence ledger wiring for this workspace — appends one JSONL record per state-changing tool call (same ledger as the Claude Code adapter).",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Bash|Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash hooks/evidence-log.sh",
+            "statusMessage": "evidence ledger",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}

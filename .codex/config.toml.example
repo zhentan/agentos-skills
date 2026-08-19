@@ -1,0 +1,17 @@
+# Recommended Codex CLI posture for working in this repo.
+# Copy the parts you want into <repo>/.codex/config.toml (project layer)
+# or merge into ~/.codex/config.toml (user layer).
+
+# Codex reads AGENTS.md natively — the canonical operating law needs no wiring.
+
+# Balanced default: agent edits freely inside the workspace, asks to escalate.
+approval_policy = "on-request"
+sandbox_mode = "workspace-write"
+
+[sandbox_workspace_write]
+# Evidence ledgers append to .evidence/ inside the workspace — no extra roots needed.
+network_access = false
+
+# Hooks note: project-local hooks (.codex/hooks.json here) load only once the
+# project .codex layer is trusted, and each hook must be reviewed and trusted
+# via /hooks before it runs. See .codex/README.md.
