@@ -7,7 +7,9 @@
 set -euo pipefail
 
 PAYLOAD="$(cat)"
-ROOT="${CLAUDE_PROJECT_DIR:-$(pwd)}"
+# Harness-neutral project-root discovery: explicit env (either harness) first,
+# then the enclosing git repo, then cwd.
+ROOT="${CLAUDE_PROJECT_DIR:-${CODEX_PROJECT_DIR:-$(git rev-parse --show-toplevel 2>/dev/null || pwd)}}"
 LEDGER_DIR="$ROOT/.evidence"
 mkdir -p "$LEDGER_DIR"
 

@@ -19,8 +19,13 @@ A second round of pruning followed a simple realization: **GitHub itself became 
 
 ## Layout
 
-- `.claude/skills/` — skills any Claude Code session in this repo (or symlinked into others) can invoke
-- `hooks/` — evidence/provenance hooks with wiring instructions
+Harness-neutral by design (a cross-model review by Codex pushed this — the canonical layer must not re-create lock-in one level up):
+
+- `AGENTS.md` — canonical operating law; `CLAUDE.md` is `@AGENTS.md` plus a Claude-only delta
+- `.agents/skills/` — canonical portable skills; `.claude/skills/` holds only symlinks to them
+- `.codex/` — Codex CLI adapter (activation/enforcement only, no protocol content)
+- `hooks/` — harness-neutral evidence/provenance scripts with wiring instructions
+- `tests/conformance.sh` — instruction indirection, skill discovery, and one fixture per hook adapter
 - `reference/` — code and rule docs carried over verbatim from agentos for future use
 - `VISION.md` — the strategy doc that predicted its own project's obsolescence, trimmed to what still governs
 
